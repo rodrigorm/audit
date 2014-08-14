@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "TraceAnalyzer\\": "src/TraceAnalyzer/"
+        }
+    },
+    "require-dev": {
+        "phploc/phploc": "*",
+        "pdepend/pdepend": "*",
+        "phpmd/phpmd": "*",
+        "squizlabs/php_codesniffer": "1.*",
+        "sebastian/phpcpd": "*",
+        "phpunit/phpunit": "4.1.*"
+    }
+}

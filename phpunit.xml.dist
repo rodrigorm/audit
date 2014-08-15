@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <phpunit bootstrap="tests/bootstrap.php"
+         colors="true"
          backupGlobals="false"
          backupStaticAttributes="false"
          strict="true"
@@ -13,7 +14,7 @@
   </testsuites>
 
   <logging>
-    <log type="coverage-html" target="build/coverage" title="XDTA Coverage"
+    <log type="coverage-html" target="build/coverage" title="TraceAnalyzer Coverage"
          charset="UTF-8" yui="true" highlight="true"
          lowUpperBound="35" highLowerBound="70"/>
     <log type="coverage-clover" target="build/logs/clover.xml"/>

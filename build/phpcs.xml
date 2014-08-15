@@ -1,3 +1,3 @@
-<ruleset name="ANN">
+<ruleset name="TraceAnalyzer">
     <rule ref="PSR2" />
 </ruleset>

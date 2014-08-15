@@ -2,4 +2,5 @@
 
 date_default_timezone_set('UTC');
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+$loader = require dirname(__DIR__) . '/vendor/autoload.php';
+$loader->addPsr4('TraceAnalyzer\\Test\\', __DIR__ . '/TraceAnalyzer/Test/');

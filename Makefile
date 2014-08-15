@@ -67,8 +67,17 @@ $(logsdir)/pmd-cpd.xml : $(PHPCPD) $(logsdir) $(SRC)
 
 # Run unit tests with PHPUnit
 phpunit : $(logsdir)/junit.xml
-$(logsdir)/junit.xml : $(PHPUNIT) $(logsdir) $(SRC) $(TESTS)
-	$(PHPUNIT)
+$(logsdir)/junit.xml : $(PHPUNIT) $(logsdir) $(SRC) $(TESTS) $(testsdir)/fixtures/trace.xt
+	$(PHPUNIT) || rm "$@"
+
+fixtures : $(testsdir)/fixtures/trace.xt
+$(testsdir)/fixtures/trace.xt : $(testsdir)/fixtures/main.php
+	@php \
+		-dxdebug.auto_trace=1 \
+		-dxdebug.trace_output_dir=$(realpath $(dir $@))\
+		-dxdebug.trace_output_name=$(basename $(notdir $@))\
+		-dxdebug.trace_format=1 \
+		$(testsdir)/fixtures/main.php
 
 trace : $(logsdir)/trace.xt
 $(logsdir)/trace.xt : $(PHPUNIT) $(logsdir) $(SRC) $(TESTS)

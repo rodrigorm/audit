@@ -1,0 +1,63 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use TraceAnalyzer\Summary\Builder;
+use TraceAnalyzer\Reader;
+
+$builder = new Builder();
+$reader = new Reader($builder);
+
+$filename = $argv[1];
+$sortKey = 'time-own';
+$limit = 25;
+
+if ($argc > 2) {
+    $sortKey = $argv[2];
+}
+
+if ($argc > 3) {
+    $limit = $argv[3];
+}
+
+$reader->read($filename);
+
+$functions = array_slice($builder->functionsSortedBy($sortKey), 0, $limit);
+
+// find longest function name
+$maxLen = 0;
+foreach ($functions as $function) {
+    if (strlen($function['name']) > $maxLen) {
+        $maxLen = strlen($function['name']);
+    }
+}
+
+echo "Showing the most costly calls sorted by '{$sortKey}'.\n\n";
+
+echo "        ", str_repeat(' ', $maxLen - 8), "        Inclusive        Own\n";
+echo "function", str_repeat(' ', $maxLen - 8), "#calls  time     memory  time     memory\n";
+echo "--------", str_repeat('-', $maxLen - 8), "----------------------------------------\n";
+
+// display functions
+foreach ($functions as $function) {
+    printf(
+        "%-{$maxLen}s %5d %8.4f %7s %8.4f %7s\n",
+        $function['name'],
+        $function['calls'],
+        $function['time-inclusive'],
+        formatBytes($function['memory-inclusive']),
+        $function['time-own'],
+        formatBytes($function['memory-own'])
+    );
+}
+
+function formatBytes($size, $precision = 2)
+{
+    if (abs($size) < 1024) {
+        return $size . 'B';
+    }
+    $base = log(abs($size)) / log(1024);
+    $suffixes = array('', 'k', 'M', 'G', 'T');
+    return round(pow(1024, $base - floor($base)), $precision) . $suffixes[floor($base)];
+}

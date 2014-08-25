@@ -31,8 +31,8 @@ Configuration read from /home/rodrigomoyle/workspace/xdebug-trace-analyzer/phpun
 
 ..........
 
-*Generating tracing reports from file /tmp/7VGvko.xt:*
-  *Class Diagram ... done*
+Generating tracing reports from file /tmp/7VGvko.xt:
+  Class Diagram ... done
 
 
 Time: 2.51 seconds, Memory: 7.25Mb

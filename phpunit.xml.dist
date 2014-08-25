@@ -31,4 +31,11 @@
     </whitelist>
   </filter>
 
+  <listeners>
+      <listener class="TraceAnalyzer\PHPUnit\TestListener">
+          <arguments>
+              <string>TraceAnalyzer\</string>
+          </arguments>
+      </listener>
+  </listeners>
 </phpunit>

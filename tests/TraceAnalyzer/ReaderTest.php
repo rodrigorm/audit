@@ -2,6 +2,7 @@
 
 namespace TraceAnalyzer;
 
+use TraceAnalyzer\Test\CollectorReport;
 use TraceAnalyzer\Test\CollectorBuilder;
 use TraceAnalyzer\Record\Entry;
 use TraceAnalyzer\Record\Leave;
@@ -9,6 +10,7 @@ use TraceAnalyzer\Record\End;
 
 class ReaderTest extends \PHPUnit_Framework_TestCase
 {
+    private $report;
     private $builder;
     private $reader;
 
@@ -20,7 +22,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
     public function testShouldParseCorrectFile()
     {
         $this->whenIReadATraceFile('trace.xt');
-        $this->assertRecords(41);
+        $this->assertRecords(43);
     }
 
     public function testShouldParseAEntryRecord()
@@ -29,8 +31,8 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
         $this->assertRecordAt(0, new Entry(
             1,
             0,
-            0.000239,
-            249600,
+            0.000204,
+            247904,
             '{main}',
             1,
             '',
@@ -42,13 +44,13 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
     public function testShouldParseALeaveRecord()
     {
         $this->whenIReadATraceFile('trace.xt');
-        $this->assertRecordAt(5, new Leave(5, 4, 0.000359, 250528));
+        $this->assertRecordAt(6, new Leave(6, 5, 0.000321, 248768));
     }
 
     public function testShouldParseAEndRecord()
     {
         $this->whenIReadATraceFile('trace.xt');
-        $this->assertRecordAt(40, new End(15.002310, 8240));
+        $this->assertRecordAt(42, new End(15.001861, 8240));
     }
 
     public function testShouldFailsWhenInvalidRecordFound()
@@ -59,7 +61,8 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
 
     private function givenACollectorBuilder()
     {
-        $this->builder = new CollectorBuilder();
+        $this->report = new CollectorReport();
+        $this->builder = new CollectorBuilder($this->report);
         $this->reader = new Reader($this->builder);
     }
 
@@ -70,11 +73,11 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
 
     private function assertRecords($expected)
     {
-        $this->assertCount($expected, $this->builder->records);
+        $this->assertCount($expected, $this->report->records);
     }
 
     private function assertRecordAt($index, $expected)
     {
-        $this->assertEquals($expected, $this->builder->records[$index]);
+        $this->assertEquals($expected, $this->report->records[$index]);
     }
 }

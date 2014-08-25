@@ -1,4 +1,9 @@
 {
+    "name": "rodrigorm/audit",
+    "require": {
+        "ext-xdebug": "2.*",
+        "alom/graphviz": "*"
+    },
     "autoload": {
         "psr-4": {
             "TraceAnalyzer\\": "src/TraceAnalyzer/"

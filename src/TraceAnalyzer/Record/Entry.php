@@ -6,7 +6,7 @@ use TraceAnalyzer\Record;
 
 class Entry implements Record
 {
-    private $level;
+    private $depth;
     private $stack;
     private $time;
     private $memory;
@@ -17,7 +17,7 @@ class Entry implements Record
     private $line;
 
     public function __construct(
-        $level,
+        $depth,
         $stack,
         $time,
         $memory,
@@ -27,7 +27,7 @@ class Entry implements Record
         $filename,
         $line
     ) {
-        $this->level = $level;
+        $this->depth = $depth;
         $this->stack = $stack;
         $this->time = $time;
         $this->memory = $memory;
@@ -36,5 +36,20 @@ class Entry implements Record
         $this->include = $include;
         $this->filename = $filename;
         $this->line = $line;
+    }
+
+    public function className()
+    {
+        if (strpos($this->function, '->') !== false) {
+            list($className, ) = explode('->', $this->function);
+            return $className;
+        }
+
+        if (strpos($this->function, '::') !== false) {
+            list($className, ) = explode('::', $this->function);
+            return $className;
+        }
+
+        return '';
     }
 }

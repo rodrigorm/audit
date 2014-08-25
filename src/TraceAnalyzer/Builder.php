@@ -15,4 +15,9 @@ interface Builder
     public function addLeaveRecord(Leave $record);
     public function addEndRecord(End $record);
     public function traceEnd(\DateTime $end);
+
+    /**
+     * @return TraceAnalyzer\Report
+     */
+    public function build();
 }

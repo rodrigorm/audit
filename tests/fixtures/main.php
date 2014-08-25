@@ -39,7 +39,13 @@ class Calculatrice
 			}
 		}
 	}
+
+    public static function main()
+    {
+        $calculator = new self();
+        echo $calculator->calculDivers(5, 10);
+    }
 }
 
-$calculator = new Calculatrice();
-echo $calculator->calculDivers(5, 10);
+
+Calculatrice::main();

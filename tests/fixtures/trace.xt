@@ -1,46 +1,48 @@
 Version: 2.2.6dev
 File format: 2
-TRACE START [2014-08-14 14:46:29]
-1	0	0	0.000239	249600	{main}	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	0
-2	1	0	0.000305	249944	Calculatrice->calculDivers	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	45
-3	2	0	0.000328	249984	Calculatrice->soustraction	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
-4	3	0	0.000338	250024	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	14
-5	4	0	0.000347	250072	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
-5	4	1	0.000359	250528
-5	5	0	0.000368	250576	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-5	5	1	0.000381	250576
-5	6	0	0.000388	250576	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-5	6	1	0.000396	250576
-4	3	1	0.000405	250072
-4	7	0	0.000410	250120	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	15
-4	7	1	5.000495	250120
-3	2	1	5.000534	250072
-3	8	0	5.000546	250112	Calculatrice->somme	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
-4	9	0	5.000559	250112	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	7
-5	10	0	5.000569	250160	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
-5	10	1	5.000579	250608
-5	11	0	5.000588	250656	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-5	11	1	5.000597	250656
-5	12	0	5.000603	250656	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-5	12	1	5.000611	250656
-4	9	1	5.000618	250160
-4	13	0	5.000624	250208	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	8
-4	13	1	7.001891	250208
-3	8	1	7.001931	250160
-3	14	0	7.001946	250208	Calculatrice->division	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
-4	15	0	7.001970	250208	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	21
-5	16	0	7.001988	250256	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
-5	16	1	7.002005	250696
-5	17	0	7.002018	250744	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-5	17	1	7.002032	250744
-5	18	0	7.002040	250744	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-5	18	1	7.002049	250744
-4	15	1	7.002057	250256
-4	19	0	7.002064	250304	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	22
-4	19	1	15.002146	250304
-3	14	1	15.002184	250256
-2	1	1	15.002193	250160
-1	0	1	15.002237	250096
-			15.002310	8240
-TRACE END   [2014-08-14 14:46:44]
+TRACE START [2014-08-23 16:29:17]
+1	0	0	0.000204	247904	{main}	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	0
+2	1	0	0.000255	247936	Calculatrice::main	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	51
+3	2	0	0.000281	248192	Calculatrice->calculDivers	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	46
+4	3	0	0.000295	248232	Calculatrice->soustraction	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
+5	4	0	0.000303	248272	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	14
+6	5	0	0.000311	248320	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
+6	5	1	0.000321	248768
+6	6	0	0.000330	248816	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
+6	6	1	0.000342	248816
+6	7	0	0.000349	248816	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
+6	7	1	0.000357	248816
+5	4	1	0.000365	248320
+5	8	0	0.000370	248368	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	15
+5	8	1	5.000486	248368
+4	3	1	5.000571	248320
+4	9	0	5.000598	248360	Calculatrice->somme	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
+5	10	0	5.000629	248360	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	7
+6	11	0	5.000653	248408	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
+6	11	1	5.000679	248848
+6	12	0	5.000697	248896	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
+6	12	1	5.000721	248896
+6	13	0	5.000735	248896	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
+6	13	1	5.000755	248896
+5	10	1	5.000773	248408
+5	14	0	5.000787	248456	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	8
+5	14	1	7.000923	248456
+4	9	1	7.001011	248408
+4	15	0	7.001035	248456	Calculatrice->division	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
+5	16	0	7.001071	248456	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	21
+6	17	0	7.001097	248504	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
+6	17	1	7.001169	248944
+6	18	0	7.001192	248992	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
+6	18	1	7.001218	248992
+6	19	0	7.001234	248992	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
+6	19	1	7.001256	248992
+5	16	1	7.001276	248504
+5	20	0	7.001292	248552	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	22
+5	20	1	15.001464	248552
+4	15	1	15.001561	248504
+3	2	1	15.001583	248408
+2	1	1	15.001687	248248
+1	0	1	15.001712	248248
+			15.001861	8240
+TRACE END   [2014-08-23 16:29:32]
 

@@ -14,7 +14,7 @@
   </testsuites>
 
   <logging>
-    <log type="coverage-html" target="build/coverage" title="TraceAnalyzer Coverage"
+    <log type="coverage-html" target="build/coverage" title="RodrigoRM\Audit Coverage"
          charset="UTF-8" yui="true" highlight="true"
          lowUpperBound="35" highLowerBound="70"/>
     <log type="coverage-clover" target="build/logs/clover.xml"/>
@@ -32,9 +32,9 @@
   </filter>
 
   <listeners>
-      <listener class="TraceAnalyzer\PHPUnit\TestListener">
+      <listener class="RodrigoRM\Audit\PHPUnit\TestListener">
           <arguments>
-              <string>TraceAnalyzer\</string>
+              <string>RodrigoRM\Audit\</string>
           </arguments>
       </listener>
   </listeners>

@@ -1,6 +1,6 @@
 <?php
 
-namespace TraceAnalyzer\PHPUnit;
+namespace RodrigoRM\Audit\PHPUnit;
 
 use PHPUnit_Util_Printer;
 use PHPUnit_Framework_TestListener;
@@ -9,8 +9,8 @@ use PHPUnit_Framework_AssertionFailedError;
 use Exception;
 use PHPUnit_Framework_TestSuite;
 
-use TraceAnalyzer\Reader;
-use TraceAnalyzer\ClassDiagram\Builder as ClassDiagramBuilder;
+use RodrigoRM\Audit\Reader;
+use RodrigoRM\Audit\ClassDiagram\Builder as ClassDiagramBuilder;
 
 class TestListener extends PHPUnit_Util_Printer implements PHPUnit_Framework_TestListener
 {

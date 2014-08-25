@@ -1,8 +1,8 @@
 <?php
 
-namespace TraceAnalyzer\Record;
+namespace RodrigoRM\Audit\Record;
 
-use TraceAnalyzer\Record;
+use RodrigoRM\Audit\Record;
 
 class Entry implements Record
 {

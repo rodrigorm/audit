@@ -1,4 +1,5 @@
 build/coverage
 build/logs
 build/pdepend
+composer.lock
 vendor/

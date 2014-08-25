@@ -1,8 +1,8 @@
 <?php
 
-namespace TraceAnalyzer\Test;
+namespace RodrigoRM\Audit\Test;
 
-use TraceAnalyzer\Report;
+use RodrigoRM\Audit\Report;
 
 class CollectorReport implements Report
 {

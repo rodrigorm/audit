@@ -1,12 +1,12 @@
 <?php
 
-namespace TraceAnalyzer;
+namespace RodrigoRM\Audit;
 
-use TraceAnalyzer\Builder;
-use TraceAnalyzer\Record\Entry;
-use TraceAnalyzer\Record\Leave;
-use TraceAnalyzer\Record\End;
-use TraceAnalyzer\InvalidRecordException;
+use RodrigoRM\Audit\Builder;
+use RodrigoRM\Audit\Record\Entry;
+use RodrigoRM\Audit\Record\Leave;
+use RodrigoRM\Audit\Record\End;
+use RodrigoRM\Audit\InvalidRecordException;
 
 class Reader
 {

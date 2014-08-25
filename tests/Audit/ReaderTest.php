@@ -1,12 +1,12 @@
 <?php
 
-namespace TraceAnalyzer;
+namespace RodrigoRM\Audit;
 
-use TraceAnalyzer\Test\CollectorReport;
-use TraceAnalyzer\Test\CollectorBuilder;
-use TraceAnalyzer\Record\Entry;
-use TraceAnalyzer\Record\Leave;
-use TraceAnalyzer\Record\End;
+use RodrigoRM\Audit\Test\CollectorReport;
+use RodrigoRM\Audit\Test\CollectorBuilder;
+use RodrigoRM\Audit\Record\Entry;
+use RodrigoRM\Audit\Record\Leave;
+use RodrigoRM\Audit\Record\End;
 
 class ReaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -55,7 +55,7 @@ class ReaderTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldFailsWhenInvalidRecordFound()
     {
-        $this->setExpectedException('TraceAnalyzer\InvalidRecordException');
+        $this->setExpectedException('RodrigoRM\Audit\InvalidRecordException');
         $this->whenIReadATraceFile('invalid_trace.xt');
     }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace TraceAnalyzer\Test;
+namespace RodrigoRM\Audit\Test;
 
-use TraceAnalyzer\Builder;
-use TraceAnalyzer\Record\Entry;
-use TraceAnalyzer\Record\Leave;
-use TraceAnalyzer\Record\End;
+use RodrigoRM\Audit\Builder;
+use RodrigoRM\Audit\Record\Entry;
+use RodrigoRM\Audit\Record\Leave;
+use RodrigoRM\Audit\Record\End;
 
-use TraceAnalyzer\Test\CollectorReport;
+use RodrigoRM\Audit\Test\CollectorReport;
 
 class CollectorBuilder implements Builder
 {
@@ -53,7 +53,7 @@ class CollectorBuilder implements Builder
 
 
     /**
-     * @return TraceAnalyzer\Report
+     * @return RodrigoRM\Audit\Report
      */
     public function build()
     {

@@ -1,12 +1,12 @@
 <?php
 
-namespace TraceAnalyzer\ClassDiagram;
+namespace RodrigoRM\Audit\ClassDiagram;
 
-use TraceAnalyzer\Builder as BuilderInterface;
-use TraceAnalyzer\Record\Entry;
-use TraceAnalyzer\Record\Leave;
-use TraceAnalyzer\Record\End;
-use TraceAnalyzer\ClassDiagram\Report;
+use RodrigoRM\Audit\Builder as BuilderInterface;
+use RodrigoRM\Audit\Record\Entry;
+use RodrigoRM\Audit\Record\Leave;
+use RodrigoRM\Audit\Record\End;
+use RodrigoRM\Audit\ClassDiagram\Report;
 
 use Alom\Graphviz\Digraph;
 
@@ -81,7 +81,7 @@ class Builder implements BuilderInterface
     }
 
     /**
-     * @return TraceAnalyzer\Report
+     * @return RodrigoRM\Audit\Report
      */
     public function build()
     {

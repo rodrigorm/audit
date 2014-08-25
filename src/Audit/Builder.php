@@ -1,10 +1,10 @@
 <?php
 
-namespace TraceAnalyzer;
+namespace RodrigoRM\Audit;
 
-use TraceAnalyzer\Record\Entry;
-use TraceAnalyzer\Record\Leave;
-use TraceAnalyzer\Record\End;
+use RodrigoRM\Audit\Record\Entry;
+use RodrigoRM\Audit\Record\Leave;
+use RodrigoRM\Audit\Record\End;
 
 interface Builder
 {
@@ -17,7 +17,7 @@ interface Builder
     public function traceEnd(\DateTime $end);
 
     /**
-     * @return TraceAnalyzer\Report
+     * @return RodrigoRM\Audit\Report
      */
     public function build();
 }

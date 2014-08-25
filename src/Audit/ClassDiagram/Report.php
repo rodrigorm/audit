@@ -1,8 +1,8 @@
 <?php
 
-namespace TraceAnalyzer\ClassDiagram;
+namespace RodrigoRM\Audit\ClassDiagram;
 
-use TraceAnalyzer\Report as ReportInterface;
+use RodrigoRM\Audit\Report as ReportInterface;
 
 use Alom\Graphviz\Digraph;
 

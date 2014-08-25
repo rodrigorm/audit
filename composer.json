@@ -1,13 +1,25 @@
 {
     "name": "rodrigorm/audit",
+    "description": "Uses xdebug function trace to generate code execution reports.",
+    "version": "0.0.1",
+    "keywords": ["trace", "profiler", "audit", "tests"],
+    "homepage": "https://github.com/rodrigorm/audit",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Rodrigo Moyle",
+            "email": "rodrigorm@gmail.com",
+            "homepage": "https://github.com/rodrigorm",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "rodrigorm@gmail.com",
+        "issues": "https://github.com/rodrigorm/audit/issues"
+    },
     "require": {
         "ext-xdebug": "2.*",
         "alom/graphviz": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "TraceAnalyzer\\": "src/TraceAnalyzer/"
-        }
     },
     "require-dev": {
         "phploc/phploc": "*",
@@ -16,5 +28,15 @@
         "squizlabs/php_codesniffer": "1.*",
         "sebastian/phpcpd": "*",
         "phpunit/phpunit": "4.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "RodrigoRM\\Audit\\": "src/Audit/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RodrigoRM\\Audit\\Test\\": "tests/Audit/Test/"
+        }
     }
 }

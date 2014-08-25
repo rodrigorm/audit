@@ -1,10 +1,10 @@
 <?php
 
-namespace TraceAnalyzer\ClassDiagram;
+namespace RodrigoRM\Audit\ClassDiagram;
 
-use TraceAnalyzer\ClassDiagram\Builder;
-use TraceAnalyzer\Record\Entry;
-use TraceAnalyzer\Record\Leave;
+use RodrigoRM\Audit\ClassDiagram\Builder;
+use RodrigoRM\Audit\Record\Entry;
+use RodrigoRM\Audit\Record\Leave;
 
 use Alom\Graphviz\Digraph;
 

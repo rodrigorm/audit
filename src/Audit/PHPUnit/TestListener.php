@@ -17,12 +17,19 @@ class TestListener extends PHPUnit_Util_Printer implements PHPUnit_Framework_Tes
     private $namespace;
     private $traceFile;
 
-    public function __construct($namespace)
+    public function __construct($namespace, $traceFile = null)
     {
+        if (is_null($traceFile)) {
+            $temp = tempnam('', '');
+            $traceFile = $temp . '.xt';
+        }
+
         $this->namespace = $namespace;
-        $temp = tempnam('', '');
-        $this->traceFile = $temp . '.xt';
-        xdebug_start_trace($temp, XDEBUG_TRACE_COMPUTERIZED);
+        $this->traceFile = $traceFile;
+        ini_set('xdebug.collect_params', 1);
+        ini_set('xdebug.collect_return', 1);
+        ini_set('xdebug.collect_includes', 1);
+        xdebug_start_trace(substr($this->traceFile, 0, -3), XDEBUG_TRACE_COMPUTERIZED);
     }
 
     public function flush()

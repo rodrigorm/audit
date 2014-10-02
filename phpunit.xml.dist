@@ -35,6 +35,7 @@
       <listener class="RodrigoRM\Audit\PHPUnit\TestListener">
           <arguments>
               <string>RodrigoRM\Audit\</string>
+              <string>build/logs/trace.xt</string>
           </arguments>
       </listener>
   </listeners>

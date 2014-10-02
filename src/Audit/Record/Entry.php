@@ -15,6 +15,7 @@ class Entry implements Record
     private $include;
     private $filename;
     private $line;
+    private $arguments = array();
 
     public function __construct(
         $depth,
@@ -25,7 +26,8 @@ class Entry implements Record
         $userDefined,
         $include,
         $filename,
-        $line
+        $line,
+        $arguments = array()
     ) {
         $this->depth = $depth;
         $this->stack = $stack;
@@ -36,6 +38,7 @@ class Entry implements Record
         $this->include = $include;
         $this->filename = $filename;
         $this->line = $line;
+        $this->arguments = $arguments;
     }
 
     public function className()

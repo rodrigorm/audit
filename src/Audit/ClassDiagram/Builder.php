@@ -6,6 +6,7 @@ use RodrigoRM\Audit\Builder as BuilderInterface;
 use RodrigoRM\Audit\Record\Entry;
 use RodrigoRM\Audit\Record\Leave;
 use RodrigoRM\Audit\Record\End;
+use RodrigoRM\Audit\Record\Result;
 use RodrigoRM\Audit\ClassDiagram\Report;
 
 use Alom\Graphviz\Digraph;
@@ -69,6 +70,10 @@ class Builder implements BuilderInterface
     }
 
     public function addEndRecord(End $record)
+    {
+    }
+
+    public function addReturnRecord(Result $record)
     {
     }
 

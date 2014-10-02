@@ -6,6 +6,7 @@ use RodrigoRM\Audit\Builder;
 use RodrigoRM\Audit\Record\Entry;
 use RodrigoRM\Audit\Record\Leave;
 use RodrigoRM\Audit\Record\End;
+use RodrigoRM\Audit\Record\Result;
 use RodrigoRM\Audit\InvalidRecordException;
 
 class Reader
@@ -20,14 +21,17 @@ class Reader
     const RECORD_FIELD_TIME = 3;
     const RECORD_FIELD_MEMORY = 4;
     const RECORD_FIELD_FUNCTION = 5;
+    const RECORD_FIELD_RETURN_VALUE = 5;
     const RECORD_FIELD_USER_DEFINED = 6;
     const RECORD_FIELD_INCLUDE = 7;
     const RECORD_FIELD_FILENAME = 8;
     const RECORD_FIELD_LINE = 9;
+    const RECORD_FIELD_PARAMETERS = 11;
 
     const RECORD_TYPE_ENTRY = '0';
     const RECORD_TYPE_EXIT  = '1';
     const RECORD_TYPE_END  = '';
+    const RECORD_TYPE_RETURN  = 'R';
 
     private $builder;
 
@@ -74,6 +78,8 @@ class Reader
         $type = $values[self::RECORD_FIELD_TYPE];
 
         if ($type == self::RECORD_TYPE_ENTRY) {
+            $arguments = array_slice($values, self::RECORD_FIELD_PARAMETERS);
+
             return $this->builder->addEntryRecord(new Entry(
                 $values[self::RECORD_FIELD_LEVEL],
                 $values[self::RECORD_FIELD_STACK],
@@ -83,7 +89,8 @@ class Reader
                 $values[self::RECORD_FIELD_USER_DEFINED],
                 $values[self::RECORD_FIELD_INCLUDE],
                 $values[self::RECORD_FIELD_FILENAME],
-                $values[self::RECORD_FIELD_LINE]
+                $values[self::RECORD_FIELD_LINE],
+                $arguments
             ));
         } elseif ($type == self::RECORD_TYPE_EXIT) {
             return $this->builder->addLeaveRecord(new Leave(
@@ -96,6 +103,10 @@ class Reader
             return $this->builder->addEndRecord(new End(
                 $values[self::RECORD_FIELD_TIME],
                 $values[self::RECORD_FIELD_MEMORY]
+            ));
+        } elseif ($type == self::RECORD_TYPE_RETURN) {
+            return $this->builder->addReturnRecord(new Result(
+                $values[self::RECORD_FIELD_RETURN_VALUE]
             ));
         }
 

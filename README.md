@@ -48,7 +48,13 @@ OK (10 tests, 10 assertions)
 
 ## Class Diagram
 
-A class diagram will be generated at `build/logs/class_diagram.dot`, you could use the graphviz package to view the file.
+A class diagram will be generated at `build/logs/class\_diagram.dot`.
+
+You could use the graphviz package to view the file:
+
+```
+$ dot -Txlib player_state.dot
+```
 
 # Tools
 

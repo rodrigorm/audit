@@ -1,48 +1,69 @@
-Version: 2.2.6dev
-File format: 2
-TRACE START [2014-08-23 16:29:17]
-1	0	0	0.000204	247904	{main}	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	0
-2	1	0	0.000255	247936	Calculatrice::main	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	51
-3	2	0	0.000281	248192	Calculatrice->calculDivers	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	46
-4	3	0	0.000295	248232	Calculatrice->soustraction	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
-5	4	0	0.000303	248272	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	14
-6	5	0	0.000311	248320	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
-6	5	1	0.000321	248768
-6	6	0	0.000330	248816	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-6	6	1	0.000342	248816
-6	7	0	0.000349	248816	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-6	7	1	0.000357	248816
-5	4	1	0.000365	248320
-5	8	0	0.000370	248368	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	15
-5	8	1	5.000486	248368
-4	3	1	5.000571	248320
-4	9	0	5.000598	248360	Calculatrice->somme	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
-5	10	0	5.000629	248360	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	7
-6	11	0	5.000653	248408	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
-6	11	1	5.000679	248848
-6	12	0	5.000697	248896	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-6	12	1	5.000721	248896
-6	13	0	5.000735	248896	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-6	13	1	5.000755	248896
-5	10	1	5.000773	248408
-5	14	0	5.000787	248456	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	8
-5	14	1	7.000923	248456
-4	9	1	7.001011	248408
-4	15	0	7.001035	248456	Calculatrice->division	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	31
-5	16	0	7.001071	248456	Calculatrice->checkParams	1		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	21
-6	17	0	7.001097	248504	func_get_args	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	36
-6	17	1	7.001169	248944
-6	18	0	7.001192	248992	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-6	18	1	7.001218	248992
-6	19	0	7.001234	248992	is_numeric	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	37
-6	19	1	7.001256	248992
-5	16	1	7.001276	248504
-5	20	0	7.001292	248552	sleep	0		/home/rodrigomoyle/workspace/xdebug-trace-analyzer/tests/fixtures/main.php	22
-5	20	1	15.001464	248552
-4	15	1	15.001561	248504
-3	2	1	15.001583	248408
-2	1	1	15.001687	248248
-1	0	1	15.001712	248248
-			15.001861	8240
-TRACE END   [2014-08-23 16:29:32]
+Version: 2.3.0dev
+File format: 4
+TRACE START [2014-10-02 20:19:38]
+1	0	0	0.000175	240864	{main}	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	0	0
+2	1	0	0.000229	241424	Calculatrice::main	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	51	0
+3	2	0	0.000268	241648	Calculatrice->calculDivers	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	46	2	long	long
+4	3	0	0.000299	241712	Calculatrice->soustraction	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	31	2	long	long
+5	4	0	0.000330	241752	Calculatrice->checkParams	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	14	2	long	long
+6	5	0	0.000355	241848	func_get_args	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	36	0
+6	5	1	0.000380	242296
+6	5	R			array(2)
+6	6	0	0.000401	242344	is_numeric	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	37	1	long
+6	6	1	0.000430	242344
+6	6	R			bool
+6	7	0	0.000447	242344	is_numeric	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	37	1	long
+6	7	1	0.000471	242344
+6	7	R			bool
+5	4	1	0.000490	241840
+5	4	R			null
+5	8	0	0.000504	241888	sleep	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	15	1	long
+5	8	1	5.000650	241888
+5	8	R			long
+4	3	1	5.000781	241840
+4	3	R			long
+4	9	0	5.000830	241840	Calculatrice->somme	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	31	2	long	long
+5	10	0	5.000902	241880	Calculatrice->checkParams	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	7	2	long	long
+6	11	0	5.000967	241928	func_get_args	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	36	0
+6	11	1	5.001033	242368
+6	11	R			array(2)
+6	12	0	5.001082	242416	is_numeric	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	37	1	long
+6	12	1	5.001149	242416
+6	12	R			bool
+6	13	0	5.001188	242416	is_numeric	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	37	1	long
+6	13	1	5.001250	242416
+6	13	R			bool
+5	10	1	5.001301	241928
+5	10	R			null
+5	14	0	5.001355	241976	sleep	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	8	1	long
+5	14	1	7.001565	241976
+5	14	R			long
+4	9	1	7.001696	241928
+4	9	R			long
+4	15	0	7.001741	241928	Calculatrice->division	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	31	2	long	long
+5	16	0	7.001816	241976	Calculatrice->checkParams	1		/home/rmoyle/workspace/audit/tests/fixtures/main.php	21	2	long	long
+6	17	0	7.001878	242024	func_get_args	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	36	0
+6	17	1	7.001946	242464
+6	17	R			array(2)
+6	18	0	7.001993	242512	is_numeric	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	37	1	long
+6	18	1	7.002061	242512
+6	18	R			bool
+6	19	0	7.002099	242512	is_numeric	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	37	1	long
+6	19	1	7.002161	242512
+6	19	R			bool
+5	16	1	7.002209	242024
+5	16	R			null
+5	20	0	7.002247	242072	sleep	0		/home/rmoyle/workspace/audit/tests/fixtures/main.php	22	1	long
+5	20	1	15.002399	242072
+5	20	R			long
+4	15	1	15.002458	242024
+4	15	R			double
+3	2	1	15.002483	241928
+3	2	R			double
+2	1	1	15.002525	241768
+2	1	R			null
+1	0	1	15.002547	241768
+1	0	R			long
+			15.002602	8240
+TRACE END   [2014-10-02 20:19:53]
 

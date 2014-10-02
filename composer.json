@@ -18,7 +18,7 @@
         "issues": "https://github.com/rodrigorm/audit/issues"
     },
     "require": {
-        "ext-xdebug": "2.*",
+        "ext-xdebug": "2.3.*",
         "alom/graphviz": "*"
     },
     "require-dev": {

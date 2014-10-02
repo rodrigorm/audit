@@ -37,10 +37,6 @@ class Builder implements BuilderInterface
     {
         $className = $record->className();
 
-        if ($className == '') {
-            return;
-        }
-
         $previous = end($this->stack);
         $this->stack[] = $className;
 

@@ -29,6 +29,17 @@ class BuilderTest extends \PHPUnit_Framework_TestCase
         $this->assertSimpleGraph();
     }
 
+    public function testShouldSkipEntryWithoutClassNameInsideUsage()
+    {
+        $this->givenABuilder();
+        $this->whenIAddAnEntry(0, 'an_function');
+        $this->whenIAddAnEntry(0, 'AnNamespace\AnClass->anMethod');
+        $this->whenIAddAnEntry(1, 'another_function');
+        $this->whenIAddALeave(1);
+        $this->whenIAddAnEntry(1, 'AnNamespace\AnotherClass->anMethod');
+        $this->assertSimpleGraph();
+    }
+
     public function testShouldNotRegisterClassUsingHimself()
     {
         $this->givenABuilder();

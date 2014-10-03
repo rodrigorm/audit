@@ -50,6 +50,16 @@ OK (10 tests, 10 assertions)
 
 A class diagram will be generated at `build/logs/class_diagram.dot`, you could use the graphviz package to view the file.
 
+# Tools
+
+## Class Diagram
+
+Uses to generate a class diagram from any trace file, usage:
+
+```
+$ bin/class-diagram Namespace /tmp/trace.1234.xt
+```
+
 ## License
 
 Copyright (C) 2014 Rodrigo Moyle <rodrigorm@gmail.com>

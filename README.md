@@ -1,5 +1,6 @@
 # Audit
 
+[![Build Status](https://travis-ci.org/rodrigorm/audit.svg?branch=master)](https://travis-ci.org/rodrigorm/audit)
 [![Code Climate](https://codeclimate.com/github/rodrigorm/audit/badges/gpa.svg)](https://codeclimate.com/github/rodrigorm/audit)
 [![Test Coverage](https://codeclimate.com/github/rodrigorm/audit/badges/coverage.svg)](https://codeclimate.com/github/rodrigorm/audit)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/77693103-78a9-4dea-a7a7-fb7935f0934d/mini.png)](https://insight.sensiolabs.com/projects/77693103-78a9-4dea-a7a7-fb7935f0934d)

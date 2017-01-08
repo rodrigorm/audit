@@ -34,7 +34,11 @@
   <listeners>
       <listener class="RodrigoRM\Audit\PHPUnit\TestListener">
           <arguments>
-              <string>RodrigoRM\Audit\</string>
+              <array>
+                  <element>
+                      <string>RodrigoRM\Audit\</string>
+                  </element>
+              </array>
           </arguments>
       </listener>
   </listeners>

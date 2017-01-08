@@ -14,12 +14,12 @@ use RodrigoRM\Audit\ClassDiagram\Builder as ClassDiagramBuilder;
 
 class TestListener extends PHPUnit_Util_Printer implements PHPUnit_Framework_TestListener
 {
-    private $namespace;
+    private $namespaces = [];
     private $traceFile;
 
-    public function __construct($namespace)
+    public function __construct($namespaces)
     {
-        $this->namespace = $namespace;
+        $this->namespaces = (array)$namespaces;
         $temp = tempnam('', '');
         $this->traceFile = $temp . '.xt';
         xdebug_start_trace($temp, XDEBUG_TRACE_COMPUTERIZED);
@@ -39,7 +39,7 @@ class TestListener extends PHPUnit_Util_Printer implements PHPUnit_Framework_Tes
 
     private function parse()
     {
-        $builder = new ClassDiagramBuilder($this->namespace);
+        $builder = new ClassDiagramBuilder($this->namespaces);
         $reader = new Reader($builder);
         $reader->read($this->traceFile);
         return $builder;

@@ -71,7 +71,7 @@ class BuilderTest extends \PHPUnit_Framework_TestCase
 
     private function givenABuilder()
     {
-        $this->builder = new Builder('AnNamespace');
+        $this->builder = new Builder(['AnNamespace']);
     }
 
     private function whenIAddAnEntry($depth, $function)

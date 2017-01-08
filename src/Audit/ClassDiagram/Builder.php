@@ -12,14 +12,8 @@ use Alom\Graphviz\Digraph;
 
 class Builder implements BuilderInterface
 {
-    private $namespaces = [];
     private $stack = array();
     private $graph = array();
-
-    public function __construct(array $namespaces)
-    {
-        $this->namespaces = $namespaces;
-    }
 
     public function setVersion($version)
     {
@@ -44,19 +38,11 @@ class Builder implements BuilderInterface
             return;
         }
 
-        if ($this->skipNamespace($className)) {
-            return;
-        }
-
         if (empty($this->graph[$className])) {
             $this->graph[$className] = array();
         }
 
         if (empty($previous)) {
-            return;
-        }
-
-        if ($this->skipNamespace($previous)) {
             return;
         }
 
@@ -99,20 +85,5 @@ class Builder implements BuilderInterface
         }
 
         return $graph;
-    }
-
-    private function skipNamespace($className)
-    {
-        if (empty($this->namespaces)) {
-            return false;
-        }
-
-        foreach ($this->namespaces as $namespace) {
-            if (strpos($className, $namespace) === 0) {
-                return false;
-            }
-        }
-
-        return true;
     }
 }

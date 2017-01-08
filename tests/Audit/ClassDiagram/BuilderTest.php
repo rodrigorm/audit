@@ -2,6 +2,7 @@
 
 namespace RodrigoRM\Audit\ClassDiagram;
 
+use RodrigoRM\Audit\NamespaceBuilder;
 use RodrigoRM\Audit\ClassDiagram\Builder;
 use RodrigoRM\Audit\Record\Entry;
 use RodrigoRM\Audit\Record\Leave;
@@ -71,7 +72,10 @@ class BuilderTest extends \PHPUnit_Framework_TestCase
 
     private function givenABuilder()
     {
-        $this->builder = new Builder(['AnNamespace']);
+        $this->builder = new NamespaceBuilder(
+            new Builder(),
+            ['AnNamespace']
+        );
     }
 
     private function whenIAddAnEntry($depth, $function)

@@ -11,6 +11,7 @@ use PHPUnit_Framework_TestSuite;
 
 use RodrigoRM\Audit\Reader;
 use RodrigoRM\Audit\ClassDiagram\Builder as ClassDiagramBuilder;
+use RodrigoRM\Audit\NamespaceBuilder;
 
 class TestListener extends PHPUnit_Util_Printer implements PHPUnit_Framework_TestListener
 {
@@ -39,7 +40,10 @@ class TestListener extends PHPUnit_Util_Printer implements PHPUnit_Framework_Tes
 
     private function parse()
     {
-        $builder = new ClassDiagramBuilder($this->namespaces);
+        $builder = new NamespaceBuilder(
+            new ClassDiagramBuilder(),
+            $this->namespaces
+        );
         $reader = new Reader($builder);
         $reader->read($this->traceFile);
         return $builder;

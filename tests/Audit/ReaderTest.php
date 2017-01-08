@@ -1,7 +1,8 @@
 <?php
 
-namespace RodrigoRM\Audit;
+namespace RodrigoRM\Audit\Test;
 
+use RodrigoRM\Audit\Reader;
 use RodrigoRM\Audit\Test\CollectorReport;
 use RodrigoRM\Audit\Test\CollectorBuilder;
 use RodrigoRM\Audit\Record\Entry;

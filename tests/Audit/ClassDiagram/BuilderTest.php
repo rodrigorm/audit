@@ -1,9 +1,10 @@
 <?php
 
-namespace RodrigoRM\Audit\ClassDiagram;
+namespace RodrigoRM\Audit\Test\ClassDiagram;
 
 use RodrigoRM\Audit\NamespaceBuilder;
 use RodrigoRM\Audit\ClassDiagram\Builder;
+use RodrigoRM\Audit\ClassDiagram\Report;
 use RodrigoRM\Audit\Record\Entry;
 use RodrigoRM\Audit\Record\Leave;
 

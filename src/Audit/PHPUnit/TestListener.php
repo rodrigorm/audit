@@ -16,11 +16,13 @@ use RodrigoRM\Audit\NamespaceBuilder;
 class TestListener extends PHPUnit_Util_Printer implements PHPUnit_Framework_TestListener
 {
     private $namespaces = [];
+    private $excludes = [];
     private $traceFile;
 
-    public function __construct($namespaces)
+    public function __construct($namespaces, $excludes = [])
     {
         $this->namespaces = (array)$namespaces;
+        $this->excludes = (array)$excludes;
         $temp = tempnam('', '');
         $this->traceFile = $temp . '.xt';
         xdebug_start_trace($temp, XDEBUG_TRACE_COMPUTERIZED);
@@ -42,7 +44,8 @@ class TestListener extends PHPUnit_Util_Printer implements PHPUnit_Framework_Tes
     {
         $builder = new NamespaceBuilder(
             new ClassDiagramBuilder(),
-            $this->namespaces
+            $this->namespaces,
+            $this->excludes
         );
         $reader = new Reader($builder);
         $reader->read($this->traceFile);

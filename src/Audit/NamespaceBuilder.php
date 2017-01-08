@@ -11,12 +11,14 @@ class NamespaceBuilder implements Builder
 {
     private $builder;
     private $namespaces = [];
+    private $excludes = [];
     private $stack = array();
 
-    public function __construct(Builder $builder, array $namespaces)
+    public function __construct(Builder $builder, array $namespaces, array $excludes = [])
     {
         $this->builder = $builder;
         $this->namespaces = $namespaces;
+        $this->excludes = $excludes;
     }
 
     public function setVersion($version)
@@ -74,6 +76,12 @@ class NamespaceBuilder implements Builder
 
     private function skipNamespace($className)
     {
+        foreach ($this->excludes as $namespace) {
+            if (strpos($className, $namespace) === 0) {
+                return true;
+            }
+        }
+
         if (empty($this->namespaces)) {
             return false;
         }

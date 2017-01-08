@@ -15,7 +15,8 @@ Add the listerner to phpunit.xml
   <listeners>
       <listener class="RodrigoRM\Audit\PHPUnit\TestListener">
           <arguments>
-              <string>RodrigoRM\Audit\</string>
+              <string>RodrigoRM\Audit\</string> <!-- Includes namespace -->
+              <string>RodrigoRM\Audit\Test\</string> <!-- Excludes namespace -->
           </arguments>
       </listener>
   </listeners>
